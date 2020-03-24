@@ -11,7 +11,7 @@ Keys and messages are all treated as strings of bytes.
 The easiest way to use threefish.js is the Threefish256 class:
 
     var tf = new Threefish256("totally secret 32 bytes long key");
-    var iv = "the iv should be 32 bits as well"; // since only CBC is implemented, IVs must be unpredictable!
+    var iv = "the iv should be 32 bytes as well"; // since only CBC is implemented, IVs must be unpredictable!
     var cryptotext = tf.encryptAuthenticated("hello", iv);
     var plaintext = tf.decryptAuthenticated(cryptotext, iv); // plaintext = "hello"
     
